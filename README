@@ -1,0 +1,43 @@
+Androne Andrei 312CC
+Punctaj obtinut pe checker local: 100p + 20p
+
+Problema 1:
+Implementarea acestui program are ca scop gestionarea unui graf neorientat și 
+determinarea costului minim pentru renovarea fiecărei zone distincte în cadrul 
+acestuia. Programul utilizează o structură de date care reprezinta un graf 
+neorientat. În fișierul "structs.h" sunt definite structurile de date necesare: 
+NonDirectedGraphNode pentru reprezentarea nodurilor grafului și NonDirectedGraph 
+pentru reprezentarea grafului în sine. De asemenea, este definită și structura 
+ZoneData, utilizată pentru a stoca informații despre zonele separate de râuri.
+
+Fișierul "ndgraph.c" al programului conține funcțiile și logica de implementare. 
+Funcția initialize_ndgraph este utilizată pentru a inițializa un graf neorientat 
+cu un număr dat de noduri. Funcția delete_ndgraph se ocupă de eliberarea memoriei 
+alocate pentru graful creat. Există, de asemenea, funcții pentru adăugarea 
+nodurilor și muchiilor în graf, verificarea existenței unui nod în graf și 
+determinarea dimensiunii unei componente a grafului utilizând parcurgerea 
+în adâncime. Pentru determinarea costului minim de renovare pentru fiecare zonă 
+separată, programul utilizează algoritmul Prim. Funcția prim_for_all_zones 
+parcurge fiecare zonă și determină costul minim pentru renovarea acesteia.
+
+Problema 2:
+Implementarea acestui program are ca scop gestionarea unui graf orientat și 
+determinarea costului (din formula) si distantei minime de parcurgere 
+a drumului de la insula pana la corabie. Programul utilizează o structură 
+de date care reprezinta un graf orientat.În fișierul "structs.h" sunt 
+definite structurile de date necesare: DirectedGraphNode pentru 
+reprezentarea nodurilor grafului și DirectedGraph pentru reprezentarea 
+grafului în sine. 
+
+Fișierul "dgraph.c" al programului conține funcțiile și logica de implementare. 
+Funcția initialize_dgraph este utilizată pentru a inițializa un graf neorientat 
+cu un număr dat de noduri. Funcția delete_dgraph se ocupă de eliberarea 
+memoriei alocate pentru graful creat. Există, de asemenea, funcții pentru 
+adăugarea nodurilor și muchiilor în graf si verificarea existenței unui drum intre 2 
+noduri (utilizând parcurgerea în adâncime). Pentru determinarea costului minim 
+de parcurgere de la un nod la altul, programul utilizează algoritmul Dijkstra.
+Un vector care retine nodurile parcurse anterior fiecarui nod in urma 
+algoritmului Dijkstra este folosit pentru a reconstitui drumurile cu cost minim.
+
+In fisierul "main.c" se realizeaza apelarea functiilor potrivite in functie
+de cerinta ce trebuie rezolvata. (data ca parametru)
